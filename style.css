@@ -70,6 +70,13 @@ button { cursor: crosshair; border: none; background: none; font: inherit; }
   transform: translate(-50%, -50%);
   transition: transform 0.15s var(--ease);
 }
+
+/* Hide custom cursor on touch devices / mobile */
+@media (hover: none), (max-width: 768px) {
+  #cursor, #cursor-ring {
+    display: none;
+  }
+}
  
 /* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width: 4px; }
